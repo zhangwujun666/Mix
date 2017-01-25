@@ -1,0 +1,14 @@
+
+
+Mix:
+create table t_Dormitory (dno varchar(10) primary key , daddress varchar(20) , dbed integer , dscore integer , dwater double , delector double );
+
+create table t_Student (sno varchar(12) primary key , sname varchar(8) , ssex char(4) , sspec varchar(12) , sintime date , stel varchar(14) , spass varchar(16) , dno varchar(10) , foreign key (dno) references t_Dormitory (dno));
+
+create table t_Repair (dno varchar(10) , rsubtime date , rsolvetime date , rdetail varchar(30) , primary key (dno , rsubtime) , foreign key (dno) references t_Dormitory (dno) );
+
+create table t_Leave (sno varchar(12) , dno varchar(10) , leavetime date , detail varchar(30) , primary key (sno , dno) , foreign key (sno) references t_Student (sno) , foreign key (dno) references t_Dormitory (dno) );
+
+create table t_Admin (aid varchar(10) primary key , apass varchar(16) , alevel integer , alogin date , adetail varchar(30) );
+
+desc t_Dormitory;desc t_Student;desc t_Repair;desc t_Leave;desc t_Admin;

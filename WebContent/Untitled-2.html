@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>3</title>
+<script>
+function r()
+{
+
+var username=document.getElementById("username");
+
+var pass=document.getElementById("password");
+	if(username.value=="")
+	{
+	alert("请输入用户名");
+	username.focus();
+	return;
+	}
+	if(pass.value=="")
+	{
+	alert("请输入密码");
+	return;
+	}
+	return true;
+	}
+	$(xs).click(function(){
+	$(js).hide();
+	$(fk).hide();
+	});
+</script>
+</head>
+<body>
+<form>
+<table id="xs" width="386" height="155" border="1" bgcolor="#ccffcc" style="border-color">
+<tr align=center>
+  <td colspan="2">
+    <button name="xs">学生</button>
+    <input type="button" value=" Test " onClick="js.style.display=js.style.display==''?'none':''">
+    <input type="button" value="学  生"  id="xs">
+    <input type="button" value="教  师"/>
+    <input type="button" value="访  客"/>  </td>
+</tr>
+<tr align=center>
+  <td width="54">学 号</td><td width="308"><input type="text" name="xuehao" id="xuehao"></td>
+</tr>
+<tr align=center><td>密 码</td><td><input type="password" name="password" id="password"></td></tr>
+<tr align=center><td colspan="2"><input type="button" value="登 录" onclick="r();"/>     <input type="reset" value="重 置"/></td></tr>
+</table>
+
+
+
+<table id="js" width="386" height="155" border="1" bgcolor="#ccffcc" style="border-color">
+  <tr align=center>
+    <td colspan="2"><input type="button" value="学  生" onclick="r();"/>
+      <input type="button" value="教  师"/>
+      <input type="button" value="访  客"/></td>
+  </tr>
+  <tr align=center>
+    <td width="54">工 号</td>
+    <td width="308"><input type="text" name="gonghao" id="gonghao"></td>
+  </tr>
+  <tr align=center>
+    <td>密 码</td>
+    <td><input type="password" name="password2" id="password2"></td>
+  </tr>
+  <tr align=center>
+    <td colspan="2"><input type="button" value="登 录" onclick="r();"/>
+      <input type="reset" value="重 置"/></td>
+  </tr>
+</table>
+
+
+
+
+<table id="fk" width="386" height="155" border="1" bgcolor="#ccffcc" style="border-color">
+  <tr align=center>
+    <td colspan="2"><input type="button" value="学  生" onclick="r();"/>
+      <input type="button" value="教  师"/>
+      <input type="button" value="访  客"/></td>
+  </tr>
+<tr align=center>
+  <td colspan="2"><input type="button" value="登 录" onclick="r();"/></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

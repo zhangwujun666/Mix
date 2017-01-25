@@ -1,0 +1,83 @@
+<script>
+function r()
+{
+
+var username=document.getElementById("username");
+
+var pass=document.getElementById("password");
+	if(username.value=="")
+	{
+	alert("请输入用户名");
+	username.focus();
+	return;
+	}
+	if(pass.value=="")
+	{
+	alert("请输入密码");
+	return;
+	}
+	return true;
+	}
+	$(xs).click(function(){
+	$(js).hide();
+	$(fk).hide();
+	});
+</script>
+
+
+
+
+	<table id="xs" width="386" height="155" border="1" bgcolor="#ccffcc" style="border-color">
+	<tr align=center>
+	  <td colspan="2">
+	    <input type="button" value=" 学  生 "  >
+	    <input type="button" value=" 教  师 " onClick="xs.style.display='none',js.style.display='table',fk.style.display='none'" >
+	    <input type="button" value=" 访  客 " onClick="xs.style.display='none',js.style.display='none',fk.style.display='table'" >
+	  </td>
+	</tr>
+	<tr align=center>
+	  <td width="54">学 号</td><td width="308"><input type="text" name="xuehao" id="xuehao"></td>
+	</tr>
+	<tr align=center><td>密 码</td><td><input type="password" name="password" id="password"></td></tr>
+	<tr align=center><td colspan="2"><input type="button" value="登 录" onclick="r();"/>     <input type="reset" value="重 置"/></td></tr>
+	</table>
+	
+	
+	
+	<table hidden id="js" width="386" height="155" border="1" bgcolor="#ccffcc" style="border-color">
+	  <tr align=center>
+	    <td colspan="2">
+	      <input type="button" value=" 学  生 " onClick="xs.style.display='table',js.style.display='none',fk.style.display='none'"  >
+	    <input type="button" value=" 教  师 " >
+	    <input type="button" value=" 访  客 " onClick="xs.style.display='none',js.style.display='none',fk.style.display='table'" >
+	  </td>
+	  </tr>
+	  <tr align=center>
+	    <td width="54">工 号</td>
+	    <td width="308"><input type="text" name="gonghao" id="gonghao"></td>
+	  </tr>
+	  <tr align=center>
+	    <td>密 码</td>
+	    <td><input type="password" name="password2" id="password2"></td>
+	  </tr>
+	  <tr align=center>
+	    <td colspan="2"><input type="button" value="登 录" onclick="r();"/>
+	      <input type="reset" value="重 置"/></td>
+	  </tr>
+	</table>
+	
+	
+	
+	
+	<table hidden id="fk" width="386" height="155" border="1" bgcolor="#ccffcc" style="border-color">
+	  <tr align=center>
+	    <td colspan="2">
+	      <input type="button" value=" 学  生 " onClick="xs.style.display='table',js.style.display='none',fk.style.display='none'"  >
+	    <input type="button" value=" 教  师 " onClick="xs.style.display='none',js.style.display='table',fk.style.display='none'" >
+	    <input type="button" value=" 访  客 " >
+	  </td>
+	  </tr>
+	<tr align=center>
+	  <td colspan="2"><input type="button" value="登 录" onclick="r();"/></td>
+	</tr>
+	</table>
